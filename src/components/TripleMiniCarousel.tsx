@@ -53,12 +53,13 @@ function MiniCarousel({
   }
 
   const previous = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length)
+    setCurrent(
+      (prev) => (prev - 1 + images.length) % images.length
+    )
   }
 
   return (
     <div className="relative h-[420px] w-full sm:h-[500px] md:h-[540px] lg:h-[620px]">
-
       {/* Angled image container */}
       <div
         className="absolute inset-0 overflow-hidden"
@@ -68,7 +69,6 @@ function MiniCarousel({
         }}
       >
         <div className="absolute inset-[-2px] overflow-hidden">
-
           <AnimatePresence initial={false} mode="popLayout">
             <motion.img
               key={current}
@@ -92,7 +92,6 @@ function MiniCarousel({
 
       {/* Internal carousel controls */}
       <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 sm:bottom-7 sm:gap-3">
-
         <button
           type="button"
           onClick={previous}
@@ -233,9 +232,7 @@ function TripleMiniCarousel() {
 
   return (
     <section className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-36">
-
       <div className="mx-auto max-w-[1600px]">
-
         {/* Section heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -267,7 +264,6 @@ function TripleMiniCarousel() {
             ===================================================== */}
 
         <div className="hidden md:flex md:items-stretch">
-
           {/* Carousel 1 */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -323,7 +319,6 @@ function TripleMiniCarousel() {
               delay={1800}
             />
           </motion.div>
-
         </div>
 
         {/* =====================================================
@@ -332,9 +327,7 @@ function TripleMiniCarousel() {
             ===================================================== */}
 
         <div className="relative md:hidden">
-
           <div className="overflow-hidden">
-
             <motion.div
               className="flex"
               animate={{
@@ -346,16 +339,12 @@ function TripleMiniCarousel() {
               }}
               drag="x"
               dragConstraints={{
-                left: -(
-                  (mobileCarousels.length - 1) *
-                  100
-                ) + "%",
+                left: 0,
                 right: 0,
               }}
               dragElastic={0.08}
               onDragEnd={handleDragEnd}
             >
-
               {mobileCarousels.map(
                 (carousel, carouselIndex) => (
                   <div
@@ -370,13 +359,11 @@ function TripleMiniCarousel() {
                   </div>
                 )
               )}
-
             </motion.div>
           </div>
 
           {/* Mobile outer carousel controls */}
           <div className="relative z-30 mt-6 flex items-center justify-center gap-4">
-
             <button
               type="button"
               onClick={mobilePrevious}
@@ -414,11 +401,8 @@ function TripleMiniCarousel() {
             >
               <FiChevronRight size={18} />
             </button>
-
           </div>
-
         </div>
-
       </div>
     </section>
   )
