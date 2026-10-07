@@ -93,9 +93,9 @@ function Footer() {
             className="
               grid
               gap-14
-              lg:grid-cols-[1.5fr_0.8fr_0.8fr_1fr]
+              lg:grid-cols-[1.5fr_0.8fr_0.8fr_1fr_1fr]
               lg:gap-12
-          "
+            "
           >
             {/* Brand */}
             <motion.div variants={itemVariants}>
@@ -369,6 +369,112 @@ function Footer() {
 
                   <FiArrowUpRight size={15} />
                 </a>
+              </div>
+            </motion.div>
+
+            {/* Developer */}
+            <motion.div variants={itemVariants}>
+              <p
+                className="
+                  text-xs
+                  font-semibold
+                  tracking-[0.2em]
+                  text-neutral-400
+                "
+              >
+                DEVELOPED BY
+              </p>
+
+              <div className="mt-6">
+                <p className="text-sm font-semibold text-neutral-950">
+                  KAYYED DEV TECH
+                </p>
+
+                <p className="mt-2 text-sm text-neutral-500">
+                  Full-Stack Software Developer
+                </p>
+
+                <a
+                  href="mailto:lokkoprince32@gmail.com"
+                  className="
+                    mt-4
+                    block
+                    w-fit
+                    text-sm
+                    text-neutral-600
+                    transition-colors
+                    duration-300
+                    hover:text-neutral-950
+                  "
+                >
+                  lokkoprince32@gmail.com
+                </a>
+
+                <div className="mt-5 flex items-center gap-3">
+                  {/* LinkedIn */}
+                  <motion.a
+                    href="https://www.linkedin.com/in/prince-emmanuel-lokko/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="KAYYED DEV TECH on LinkedIn"
+                    whileHover={{
+                      y: -4,
+                    }}
+                    whileTap={{
+                      scale: 0.94,
+                    }}
+                    className="
+                      flex
+                      h-10
+                      w-10
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-neutral-200
+                      text-neutral-600
+                      transition-colors
+                      duration-300
+                      hover:border-neutral-950
+                      hover:bg-neutral-950
+                      hover:text-white
+                    "
+                  >
+                    <FiLinkedin size={17} />
+                  </motion.a>
+
+                  {/* GitHub */}
+                  <motion.a
+                    href="https://github.com/Victrf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="KAYYED DEV TECH on GitHub"
+                    whileHover={{
+                      y: -4,
+                    }}
+                    whileTap={{
+                      scale: 0.94,
+                    }}
+                    className="
+                      flex
+                      h-10
+                      w-10
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-neutral-200
+                      text-neutral-600
+                      transition-colors
+                      duration-300
+                      hover:border-neutral-950
+                      hover:bg-neutral-950
+                      hover:text-white
+                    "
+                  >
+                    <FiGithub size={17} />
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           </div>
