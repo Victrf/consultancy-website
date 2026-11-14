@@ -234,7 +234,7 @@ function ContactPage() {
                 </a>
 
                 <a
-                  href="mailto:info@lightcorporation.com"
+                  href="mailto:admin@lightcorporations.com"
                   className="group flex items-start gap-4"
                 >
                   <FiMail className="mt-1 text-lg text-white/70" />

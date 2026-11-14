@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+
+import { useCallback, useEffect, useState } from "react"
 import { AnimatePresence, motion, type Variants } from "framer-motion"
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 
@@ -66,21 +67,21 @@ function ImageCarousel({
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(1)
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setDirection(1)
 
     setCurrentIndex((current) =>
       current === images.length - 1 ? 0 : current + 1
     )
-  }
+  }, [images.length])
 
-  const previousSlide = () => {
+  const previousSlide = useCallback(() => {
     setDirection(-1)
 
     setCurrentIndex((current) =>
       current === 0 ? images.length - 1 : current - 1
     )
-  }
+  }, [images.length])
 
   const goToSlide = (index: number) => {
     if (index === currentIndex) return
@@ -92,12 +93,10 @@ function ImageCarousel({
   useEffect(() => {
     if (!autoPlay || images.length <= 1) return
 
-    const timer = setInterval(() => {
-      nextSlide()
-    }, interval)
+    const timer = setInterval(nextSlide, interval)
 
     return () => clearInterval(timer)
-  }, [autoPlay, interval, images.length])
+  }, [autoPlay, interval, images.length, nextSlide])
 
   if (!images.length) {
     return null

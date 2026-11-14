@@ -1,3 +1,4 @@
+
 import Navbar from "../components/Navbar"
 import Carousel from "../components/Carousel"
 import ExpertiseImpact from "../components/ExpertiseImpact"
@@ -12,48 +13,45 @@ import Footer from "../components/Footer"
 import FloatingWhatsApp from "../components/FloatingWhatsApp"
 import GradientSection from "../components/GradientSection"
 
-import consultingImage1 from "../assets/consulting-1.jpg"
-import consultingImage2 from "../assets/consulting-2.jpg"
-import consultingVideo1 from "../assets/consulting.mp4"
-import consultingVideo2 from "../assets/consulting-2.mp4"
-import bannerVideo from "../assets/light-corporation-banner.mp4"
+const bannerVideo =
+  "https://res.cloudinary.com/dtpqq0qcp/video/upload/v1794628811/light-corporation-banner_jss7wx.mp4"
 
 const slides = [
   {
     id: 1,
-    type: "image" as const,
-    src: consultingImage1,
-    label: "Consulting",
-    title: "Strategic solutions for modern businesses",
-    description:
-      "Helping organizations make informed decisions and build sustainable growth.",
-  },
-  {
-    id: 2,
     type: "video" as const,
-    src: consultingVideo1,
+    src: "https://res.cloudinary.com/dtpqq0qcp/video/upload/v1794628044/consulting-2_jkbmpn.mp4",
     label: "Our Approach",
     title: "Experience-driven consulting",
     description:
       "Practical strategies designed around your organization's objectives.",
   },
   {
-    id: 3,
+    id: 2,
     type: "image" as const,
-    src: consultingImage2,
-    label: "Partnership",
-    title: "Working with you from strategy to execution",
+    src: "https://res.cloudinary.com/dtpqq0qcp/image/upload/v1794628043/consulting-1_idafmf.jpg",
+    label: "Consulting",
+    title: "Strategic solutions for modern businesses",
     description:
-      "A collaborative approach focused on measurable outcomes.",
+      "Helping organizations make informed decisions and build sustainable growth.",
   },
   {
-    id: 4,
+    id: 3,
     type: "video" as const,
-    src: consultingVideo2,
+    src: "https://res.cloudinary.com/dtpqq0qcp/video/upload/v1794628047/consulting_ag0foc.mp4",
     label: "Innovation",
     title: "Building solutions for what's next",
     description:
       "Combining insight, strategy, and execution to create lasting impact.",
+  },
+  {
+    id: 4,
+    type: "image" as const,
+    src: "https://res.cloudinary.com/dtpqq0qcp/image/upload/v1794628043/consulting-2_ujb0t4.jpg",
+    label: "Partnership",
+    title: "Working with you from strategy to execution",
+    description:
+      "A collaborative approach focused on measurable outcomes.",
   },
 ]
 
